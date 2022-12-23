@@ -1,25 +1,17 @@
 import React from "react";
+import PokemonForm from "./PokemonForm";
 import { Card } from "semantic-ui-react";
 
-function PokemonCard() {
+
+const PokemonCard = ({ name, sprite, hp }) => {
   return (
-    <Card>
-      <div>
-        <div className="image">
-          <img alt="oh no!" />
-        </div>
-        <div className="content">
-          <div className="header">POKEMON NAME HERE</div>
-        </div>
-        <div className="extra content">
-          <span>
-            <i className="icon heartbeat red" />
-            POKEMON HP HERE hp
-          </span>
-        </div>
-      </div>
-    </Card>
+    <div className="pokemon-card">
+      <h2>{name}</h2>
+      <img src={sprite} alt={name} />
+      <p>HP: {hp}</p>
+    </div>
   );
-}
+};
 
 export default PokemonCard;
+
